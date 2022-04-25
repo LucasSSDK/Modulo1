@@ -64,14 +64,17 @@ do {
       );
       empates++;
       console.log(`${empates} / ${quantidadeDePartidas}`);
-    }
+    } 
+        console.log(`${nome} = ${usuarioVitorias}`)
+        console.log(`Adeversário = ${pcVitorias}`)
+        console.log(`Empates = ${empates}`)
     rep++;
   }
   console.log(
     `Você venceu ${usuarioVitorias} vezes, seu adversário venceu ${pcVitorias} vezes e ocorreram ${empates} empates.`
   );
 
-  if (usuarioVitorias > empates && usuarioVitorias > pcVitorias) {
+  if (usuarioVitorias >= empates && usuarioVitorias > pcVitorias) {
     console.log(`Parabens ${nome}!!! vc venceu esse desafio!!!`);
   } else if (pcVitorias > empates && pcVitorias > usuarioVitorias) {
     console.log(
@@ -81,10 +84,12 @@ do {
     console.log(
       `Eh ${nome}, vc empatou essa rodada, jogue mais para desempatar esse desafio!.`
     );
-  } else if (usuarioVitorias == pcVitorias || usuarioVitorias == empates) {
+  } else if (usuarioVitorias == pcVitorias ) {
     console.log(
       `${nome} Houve um empate no número de vitórias, jogue novamente para decidir quem é o melhor nessa disputa!.`
     );
+  } else if( usuarioVitorias > pcVitorias) {
+      console.log(`Parabens ${nome}, você foi o grande vencedor deste desafio!!.`)
   } else {
     console.log("Jogue novamente para definir quem é o melhor!");
   }
